@@ -1,0 +1,594 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Padala Sanjana | Data Analyst Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #60a5fa;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #111827, #1e3a8a);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            font-size: 24px;
+            color: #93c5fd;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 6px;
+            text-decoration: none;
+            background: #3b82f6;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            margin-bottom: 10px;
+        }
+
+        .education {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3b82f6;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        .education-card h3 {
+            color: #1d4ed8;
+        }
+
+        .achievement-list,
+        .strength-list,
+        .interest-list {
+            max-width: 700px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .achievement,
+        .strength,
+        .interest {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #030712;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav>
+        <h2>Sanjana</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>Hi, I'm Padala Sanjana</h1>
+
+        <h3>Data Analyst | Data Science Enthusiast</h3>
+
+        <p>
+            Final-year B.Tech Computer Science and Data Science student
+            passionate about Data Analytics, Data Science, Python,
+            Machine Learning and NLP.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- About -->
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a final-year B.Tech Computer Science and Data Science
+            (CSD) student from DRK College of Engineering and Technology,
+            JNTUH.
+        </p>
+
+        <br>
+
+        <p>
+            I have a strong interest in Data Analytics and Data Science.
+            I am familiar with Python, SQL, Excel, Machine Learning,
+            NLP, Pandas, NumPy, Matplotlib, Git and GitHub.
+        </p>
+
+        <br>
+
+        <p>
+            My goal is to begin my career in Data Analytics or Data Science
+            and continuously develop my technical and analytical skills.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Skills -->
+<section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Excel</div>
+        <div class="skill">Data Science</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">NLP</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Matplotlib</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+
+    </div>
+
+</section>
+
+
+<!-- Projects -->
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+
+            <h3>Amazon Reviews Sentiment Analysis</h3>
+
+            <p>
+                <strong>Technologies:</strong>
+                Python | NLP | Machine Learning
+            </p>
+
+            <p>
+                Developed a sentiment analysis system to classify
+                Amazon customer reviews.
+            </p>
+
+            <p>
+                Used Python and Natural Language Processing techniques
+                for text preprocessing and sentiment classification.
+            </p>
+
+            <p>
+                Analyzed customer feedback to identify positive and
+                negative opinions.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Fake News Detection</h3>
+
+            <p>
+                <strong>Technologies:</strong>
+                Python | Machine Learning | NLP
+            </p>
+
+            <p>
+                Developed a machine learning-based system to detect
+                potentially fake news.
+            </p>
+
+            <p>
+                Performed text preprocessing and feature extraction
+                on news content.
+            </p>
+
+            <p>
+                Applied machine learning techniques for classification
+                of news articles.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Education -->
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="education">
+
+        <div class="education-card">
+
+            <h3>B.Tech – Computer Science and Data Science (CSD)</h3>
+
+            <p>
+                <strong>DRK College of Engineering and Technology, JNTUH</strong>
+            </p>
+
+            <p>
+                Expected Graduation: 2027
+            </p>
+
+            <p>
+                Hyderabad, Telangana
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>Intermediate – MPC</h3>
+
+            <p>
+                <strong>Singareni Girls Junior College</strong>
+            </p>
+
+            <p>
+                Percentage: 56.3%
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>SSC</h3>
+
+            <p>
+                <strong>Z.P. High School</strong>
+            </p>
+
+            <p>
+                Percentage: 100%
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Achievements -->
+<section>
+
+    <h2>Achievements</h2>
+
+    <div class="achievement-list">
+
+        <div class="achievement">
+            🏆 Academic Projects
+        </div>
+
+        <div class="achievement">
+            📜 Online Certifications
+        </div>
+
+        <div class="achievement">
+            💻 Technical Skill Development
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Strengths -->
+<section>
+
+    <h2>Strengths</h2>
+
+    <div class="strength-list">
+
+        <div class="strength">Hard-working</div>
+        <div class="strength">Quick Learner</div>
+        <div class="strength">Problem Solving</div>
+        <div class="strength">Teamwork</div>
+        <div class="strength">Communication</div>
+        <div class="strength">Time Management</div>
+
+    </div>
+
+</section>
+
+
+<!-- Areas of Interest -->
+<section>
+
+    <h2>Areas of Interest</h2>
+
+    <div class="interest-list">
+
+        <div class="interest">Data Analytics</div>
+        <div class="interest">Data Science</div>
+        <div class="interest">Machine Learning</div>
+        <div class="interest">Python Programming</div>
+        <div class="interest">Natural Language Processing</div>
+
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        📧
+        <a href="mailto:padalasanjana93@gmail.com">
+            padalasanjana93@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📱
+        <a href="tel:9393933289">
+            9393933289
+        </a>
+    </p>
+
+    <p>
+        📍 Hyderabad, Telangana, India
+    </p>
+
+    <br>
+
+    <p>
+        🔗
+        <a href="https://linkedin.com/in/padala-sanjana-47a491424"
+           target="_blank">
+            LinkedIn
+        </a>
+        |
+        <a href="https://github.com/padala-sanjana"
+           target="_blank">
+            GitHub
+        </a>
+    </p>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 Padala Sanjana | Data Analyst Portfolio
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
